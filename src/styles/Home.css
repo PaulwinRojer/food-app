@@ -1,0 +1,1453 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+#banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 179, 14, 255);
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 500px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.banner-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text-section {
+  width: 50%;
+  padding-right: 30px;
+}
+
+.text-section h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: white;
+}
+
+.text-section h3 {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.pickup-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.button-group button:hover {
+  background-color: white !important;
+  border: 1px solid #ff5349;
+}
+
+.address-group {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+
+.address-group button {
+  background-image: linear-gradient(to right, #ff5349, #fd6860);
+  color: white;
+}
+
+/* Wrapper for input and icon */
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+}
+
+/* Input field styling */
+.input-wrapper input {
+  padding: 10px 10px 10px 40px;
+  /* Space for the icon on the left */
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  width: 100%;
+  font-size: 16px;
+  background-color: gainsboro;
+}
+
+/* Input focus styling */
+.input-wrapper input:focus {
+  border-color: rgba(246, 174, 14, 255);
+  outline: none;
+}
+
+/* Icon inside the input */
+.input-wrapper .input-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar-icon1 {
+  font-size: 18px;
+  color: white;
+}
+
+.image-section img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets and Medium Screens */
+@media (max-width: 768px) {
+  #banner {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .banner-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-section {
+    width: 100%;
+    text-align: center;
+    padding-right: 0;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .address-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .image-section img {
+    display: none;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 480px) {
+  #banner {
+    padding: 10px;
+    height: 470px;
+  }
+
+  #banner h1 {
+    font-size: 30px;
+    margin-top: 50px;
+  }
+
+  #banner h3 {
+    font-size: 16px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .input-wrapper input {
+    width: 80%;
+  }
+
+  .image-section img {
+    display: none;
+  }
+}
+
+/* section 2 */
+
+#products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 0px 70px 0px;
+}
+
+@media (max-width: 480px) {
+  #products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0px 40px 0px;
+  }
+
+  #products>div>div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 310px;
+    text-align: left;
+  }
+}
+
+
+#products>div {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  /* Ensures responsiveness by wrapping on smaller screens */
+  justify-content: center;
+}
+
+#products>div>div {
+  position: relative;
+  /* Needed for positioning the discount button inside the image */
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 310px;
+  /* Adjust the card size */
+  text-align: left;
+}
+
+#products img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.discount-button {
+  position: absolute;
+  /* Positioning relative to the image */
+  bottom: 100px;
+  /* 10px from the bottom edge */
+  left: 16px;
+  /* 10px from the left edge */
+  background-color: rgba(255,
+      179,
+      14,
+      255) !important;
+  /* Discount button background */
+  color: #ffffff;
+  /* Text color */
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+
+  text-align: left;
+  /* Align text to the left */
+  z-index: 2;
+  /* Ensures it appears above the image */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: auto;
+}
+
+.discount-button span.large-number {
+  font-size: 20px;
+  /* Larger font size for the number */
+  line-height: 1;
+  /* Ensure tight spacing */
+  overflow-y: hidden;
+
+}
+
+.discount-button span.text-small {
+  font-size: 9px;
+  /* Smaller font size for text */
+  line-height: 1.2;
+  /* Adjust line spacing */
+  text-transform: uppercase;
+  /* Ensure consistent text styling */
+}
+
+#products h4 {
+  font-size: 18px;
+  color: #333333;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#products .days {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 150px;
+  transition: background-color 0.3s ease;
+  color: #ffffff;
+  /* Text color */
+  background-color: #ff5349;
+  /* Button color */
+  margin-bottom: 10px;
+}
+
+#products .days:hover {
+  background-color: white;
+  /* Slight hover effect */
+}
+
+#products button p {
+  display: inline;
+  font-size: 12px;
+  margin-left: 5px;
+  color: #ffffff;
+}
+
+#products button:last-of-type {
+  background-color: rgba(255,
+      83,
+      73,
+      0.1);
+  /* Mild background for the "Days Remaining" button */
+  color: #ff5349;
+  /* Text color for the "Days Remaining" button */
+  font-size: 12px;
+  border: 1px solid #ff5349;
+  /* Border to match the color */
+}
+
+
+
+
+/* section3 */
+#how_it_works {
+  background-image: linear-gradient(to bottom, #f9e5e4, white);
+  padding: 40px 20px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 480px) {
+  #how_it_works {
+    background-image: linear-gradient(to bottom, #f9e5e4, white);
+    padding: 40px 10px 0px 10px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    margin-bottom: 00px;
+  }
+}
+
+.how-it-works-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.how-it-works-heading {
+  color: #FF5349;
+  /* Heading color */
+  text-align: center;
+  /* Center the heading */
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.how-it-works-cards {
+  display: flex;
+
+  align-items: flex-start;
+  gap: 15px;
+  /* Reduced gap between the cards */
+  flex-wrap: nowrap;
+  /* Prevent wrapping of cards to the next line */
+}
+
+.how-it-works-card {
+  display: flex;
+  flex-direction: column;
+  /* Align content in a column inside each card */
+  align-items: center;
+  /* Center align content inside each card */
+  text-align: center;
+  /* Center the text in each card */
+
+  padding: 20px;
+  border-radius: 10px;
+
+  flex: 1;
+  /* Allow cards to grow and fill the space evenly */
+  max-width: 22%;
+  /* Ensure cards take up the appropriate space */
+}
+
+.how-it-works-card-heading {
+  font-size: 18px;
+  color: #333333;
+  /* Dark color for the headings inside the cards */
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.how-it-works-card-text {
+  font-size: 14px;
+  color: #666666;
+  /* Lighter color for the description text */
+  margin-top: 5px;
+}
+
+.how-it-works-icon {
+  font-size: 50px;
+  /* Make icons larger */
+  color: rgba(255, 179, 14, 255);
+  /* Icon color */
+  margin-bottom: 10px;
+  /* Space between the icon and text */
+}
+
+
+/* media queries for how it works section */
+@media (max-width: 1024px) {
+
+  /* Tablet Screens */
+  .how-it-works-cards {
+    flex-wrap: wrap;
+    /* Allow cards to wrap onto multiple lines */
+    justify-content: space-evenly;
+    /* Evenly space the cards */
+  }
+
+  .how-it-works-card {
+    max-width: 45%;
+    /* Reduce card width to allow 2 cards per row */
+    margin-bottom: 20px;
+    /* Add some space between the rows */
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Small Tablet Screens */
+  .how-it-works-cards {
+    flex-wrap: wrap;
+    /* Allow wrapping */
+    justify-content: center;
+    /* Center the cards */
+  }
+
+  .how-it-works-card {
+    max-width: 48%;
+    /* Allow 2 cards per row on smaller tablets */
+    margin-bottom: 20px;
+  }
+
+  .how-it-works-heading {
+    font-size: 28px;
+    /* Smaller heading on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* Mobile Screens */
+  .how-it-works-cards {
+    flex-direction: column;
+    /* Stack cards vertically */
+    align-items: center;
+    /* Center align the cards */
+  }
+
+  .how-it-works-card {
+    max-width: 90%;
+    /* Make cards take up most of the width on mobile */
+    margin-bottom: 20px;
+    /* Add space between the cards */
+  }
+
+  .how-it-works-heading {
+    font-size: 24px;
+    /* Smaller heading for mobile */
+    margin-bottom: 20px;
+    /* Reduce margin */
+  }
+
+  .how-it-works-card-heading {
+    font-size: 16px;
+    /* Smaller text for card headings */
+  }
+
+  .how-it-works-card-text {
+    font-size: 12px;
+    /* Smaller text for card descriptions */
+  }
+
+  .how-it-works-icon {
+    font-size: 40px;
+    /* Smaller icons for mobile */
+  }
+}
+
+
+
+
+/* section4 */
+
+/* Section Container */
+#popular-items {
+  padding: 40px 20px;
+}
+
+.popular-items-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Section Heading */
+.popular-items-heading {
+  font-size: 36px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 30px;
+}
+
+/* Carousel Styling */
+.popular-items-carousel {
+  margin-top: 20px;
+}
+
+/* Individual Card Styling */
+.popular-item-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+
+}
+
+.popular-item-image {
+  width: 90%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Content Styling */
+.popular-item-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.popular-item-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+  margin: 5px 0;
+}
+
+.popular-item-area {
+  color: rgba(255, 179, 14, 255);
+  font-weight: 100;
+  margin-top: 5px;
+
+}
+
+.popular-item-days {
+  background-color: rgb(250, 70, 22);
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.popular-item-days:hover {
+  background-color: #e14a43;
+}
+
+.popular-item-amount {
+  margin-top: 6px;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
+
+.popular-icon {
+  color: rgba(255, 179, 14, 255);
+  margin-right: 5px;
+}
+
+/* arrows */
+
+/* 
+restaurant section */
+
+/* General Styling */
+#restaurants {
+  padding: 20px;
+  overflow-y: hidden;
+}
+
+.restaurant-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.restaurant-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.restaurant-card {
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.restaurant-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.restaurant-discount {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff6f61;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+}
+
+.restaurant-info {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.restaurant-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.restaurant-name {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.restaurant-rating {
+  font-size: 0.9rem;
+  color: #888;
+  text-align: left;
+  margin-top: 5px;
+}
+
+.restaurant-dish {
+  font-size: 1rem;
+  color: #555;
+  margin: 10px 0;
+}
+
+.restaurant-status {
+  background: #fa4616;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.restaurant-status:hover {
+  background: #e14a43;
+}
+
+
+.button-view {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0px;
+}
+
+.button-view button {
+  background-color: rgba(246, 174, 14, 255);
+  color: white
+}
+
+.button-view button:hover {
+  background-color: white;
+  color: rgba(246, 174, 14, 255);
+  border: 1px solid rgba(246, 174, 14, 255);
+}
+
+/* media queries for restaurant section */
+
+/* Media Queries */
+
+/* Mobile Screens */
+@media (max-width: 480px) {
+  .restaurant-title {
+    font-size: 1.5rem;
+    /* Smaller title */
+  }
+
+  .restaurant-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    /* Two columns on small screens */
+    gap: 10px;
+    /* Optional, reduces the gap between cards */
+  }
+
+  .restaurant-card {
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  .restaurant-name {
+    font-size: 1rem !important;
+    /* Smaller font size for restaurant name */
+  }
+
+  .restaurant-rating {
+    font-size: 0.8rem;
+    /* Smaller rating font */
+  }
+
+  .restaurant-status {
+    font-size: 0.8rem !important;
+    /* Smaller status font */
+    padding: 6px 10px;
+  }
+
+  .button-view button {
+    width: 100%;
+    /* Full-width button on mobile */
+    font-size: 1rem;
+  }
+}
+
+/* Tablet Screens */
+@media (max-width: 768px) {
+  .restaurant-title {
+    font-size: 1.8rem;
+    /* Slightly smaller title */
+  }
+
+  .restaurant-grid {
+    grid-template-columns: repeat(2, 1fr);
+    /* Two columns on tablet */
+  }
+
+  .restaurant-name {
+    font-size: 1.2rem;
+    /* Slightly smaller restaurant name */
+  }
+
+  .restaurant-rating {
+    font-size: 0.9rem;
+    /* Normal rating font */
+  }
+
+  .restaurant-status {
+    font-size: 0.9rem;
+    padding: 7px 12px;
+  }
+
+  .button-view button {
+    width: 100%;
+    /* Full-width button on tablet */
+    font-size: 1rem;
+  }
+}
+
+/* Laptop Screens */
+@media (max-width: 1024px) {
+  .restaurant-title {
+    font-size: 2rem;
+    /* Default size for laptop */
+  }
+
+  .restaurant-grid {
+    grid-template-columns: repeat(3, 1fr);
+    /* Three columns on laptops */
+  }
+
+  .restaurant-name {
+    font-size: 1.3rem;
+  }
+
+  .restaurant-rating {
+    font-size: 1rem;
+  }
+
+  .restaurant-status {
+    font-size: 1rem;
+    padding: 8px 14px;
+  }
+
+  .button-view button {
+    width: auto;
+    /* Restore width on laptops */
+    font-size: 1rem;
+  }
+}
+
+/* Desktop Screens */
+@media (min-width: 1025px) {
+  .restaurant-title {
+    font-size: 2.5rem;
+    /* Larger title for desktops */
+  }
+
+  .restaurant-grid {
+    grid-template-columns: repeat(4, 1fr);
+    /* Four columns on desktops */
+  }
+
+  .restaurant-name {
+    font-size: 1.5rem;
+  }
+
+  .restaurant-rating {
+    font-size: 1.1rem;
+  }
+
+  .restaurant-status {
+    font-size: 1.1rem;
+    padding: 9px 16px;
+  }
+
+  .button-view button {
+    font-size: 1.1rem;
+  }
+}
+
+
+/* section installing the app */
+/* General Layout */
+
+/* Install Container */
+/* General Layout */
+.install-app-section {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #fff, #ffe7c1);
+  padding: 70px 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: fit-content;
+  margin: 0 auto 40px auto;
+  /* Centered */
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+  /* Space between icons */
+  text-align: center;
+  padding-right: 20px;
+  border-right: 1px solid rgb(190, 186, 186);
+  /* Add border to all items */
+}
+
+.feature-item:last-child {
+  border-right: none;
+  /* Remove the border for the last item */
+}
+
+.feature-item .icon {
+  margin-bottom: 10px;
+}
+
+.feature-item p {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Install Container */
+.install-container {
+  display: flex;
+  align-items: flex-end;
+  /* Aligns the mobile image at the bottom */
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  position: relative;
+  margin-top: 40px;
+  overflow-y: hidden;
+}
+
+/* Mobile Preview Section */
+.mobile-preview {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  /* Aligns image bottom */
+  height: 100%;
+}
+
+.mobile-image {
+  height: 300px;
+  /* Adjust image size */
+  width: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: contain;
+}
+
+/* App Info Section */
+.app-info {
+  flex: 1;
+  text-align: left;
+}
+
+.app-info h2 {
+  font-size: 32px;
+  color: #ff9000;
+  margin-bottom: 15px;
+}
+
+.app-info p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.download-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.download-buttons button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #ff9000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.download-buttons .google-play:hover {
+  background-color: #e87c00;
+}
+
+.download-buttons .app-store:hover {
+  background-color: #d96d00;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .features {
+    flex-direction: row;
+    padding: 15px 20px;
+  }
+
+  .feature-item {
+    border-right: none;
+    /* Remove borders in a stacked view */
+    margin-bottom: 15px;
+  }
+
+  .install-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mobile-image {
+    height: 200px;
+  }
+
+  .app-info {
+    text-align: center;
+  }
+
+  .app-info h2 {
+    font-size: 24px;
+  }
+
+  .app-info p {
+    font-size: 14px;
+  }
+
+  .download-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .features {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .feature-item {
+    margin: 0;
+  }
+
+  .app-info h2 {
+    font-size: 20px;
+  }
+
+  .app-info p {
+    font-size: 12px;
+  }
+
+  .download-buttons button {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+}
+
+/* section search by food */
+
+
+/* General Styling */
+#search-by-food {
+  padding: 50px 0px;
+  background-color: #faeae9;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.search-by-food-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  /* Enables positioning for the arrows */
+}
+
+.search-by-food-title {
+  font-size: 2rem;
+  color: #333;
+  text-align: left;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+@media (max-width: 480px) {
+  .search-by-food-title {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 45px;
+    position: relative;
+  }
+}
+
+.carousel-container {
+  padding: 10px 0;
+
+}
+
+.food-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.food-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+/* Uncomment to enable hover scaling */
+.food-image:hover {
+  transform: scale(1.1);
+}
+
+.food-name {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Custom Arrows */
+.custom-arrow {
+  position: absolute;
+  top: -16px;
+  /* Aligns with the heading */
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  z-index: 10;
+  color: rgba(246, 174, 14, 255);
+  ;
+}
+
+.left-arrow {
+
+  right: 60px;
+  /* Adjusts the spacing to the left of the right arrow */
+}
+
+.right-arrow {
+  right: 20px;
+  /* Aligns close to the container's edge */
+}
+
+.custom-arrow:hover {
+  color: #000;
+}
+
+
+
+/* special box section */
+#special-menu {
+  padding: 70px 20px;
+  background-color: #f9f9f9;
+  font-family: "Montserrat", sans-serif;
+}
+
+.special-menu-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.special-menu-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+}
+
+/* .reverse-layout {
+  flex-direction: row-revers;
+} */
+
+.special-menu-content {
+  flex: 0.5;
+  padding: 20px 30px;
+}
+
+.special-menu-content h1 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.special-menu-content h1 span {
+  color: #f39c12;
+}
+
+.special-menu-content p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.order-button {
+  padding: 10px 20px;
+  background-color: #f39c12;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+  background-color: #e67e22;
+}
+
+.special-menu-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.special-menu-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* 
+media queries for special menu section */
+
+/* For screens smaller than 700px */
+@media (max-width: 700px) {
+  .special-menu-box {
+    margin-bottom: 40px;
+    /* Reduce spacing between boxes */
+  }
+
+  .special-menu-content h1 {
+    font-size: 1.2rem;
+    /* Smaller font size for headings */
+  }
+
+  .special-menu-content p {
+    font-size: 0.8rem;
+    /* Smaller font size for paragraph */
+  }
+
+  .order-button {
+    padding: 8px 15px;
+    /* Adjust button size */
+    font-size: 0.9rem;
+    /* Smaller button text */
+  }
+
+  .special-menu-image img {
+    height: 250px;
+    /* Smaller image height */
+  }
+}
+
+/* For screens smaller than 500px */
+@media (max-width: 500px) {
+  .special-menu-content h1 {
+    font-size: 1rem;
+    /* Further reduce font size */
+  }
+
+  .special-menu-box {
+    flex-direction: column-reverse;
+
+  }
+
+  .reverse-layout {
+    flex-direction: column;
+  }
+
+  .special-menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centers the button horizontally */
+    justify-content: center;
+    /* Centers the button vertically (if needed) */
+    text-align: center;
+    /* Centers the text */
+  }
+
+  .special-menu-content p {
+    font-size: 0.7rem;
+    /* Smaller paragraph text */
+    margin-bottom: 10px;
+  }
+
+  .order-button {
+    padding: 10px !important;
+    font-size: 13px !important;
+    width: 180px;
+    align-self: center !important;
+  }
+
+  .special-menu-image img {
+    height: 200px;
+    /* Further reduce image height */
+  }
+}
+
+
+/* ready to order section */
+
+#ready-to-order {
+  background-image: url(../assets/images/order_bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  height: 310px;
+  padding: 45px 0 0 0;
+  overflow: hidden;
+}
+
+/* Container styling */
+.container-order {
+  width: 100%;
+  height: auto;
+  padding: 40px;
+  margin: 0 auto;
+  position: relative;
+  /* To position images relative to the container */
+  z-index: 1;
+  /* Ensure content is above background images */
+}
+
+/* Text styling */
+.container-order h2 {
+  font-size: 2.5rem;
+  color: white;
+  /* White text for contrast */
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.order-button {
+  padding: 15px 30px;
+  background-color: #ff6b01;
+  /* Bright orange button */
+  color: white;
+  border: none;
+  margin-top: 30px;
+
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.order-button:hover {
+  background-color: #e55c00;
+  transform: scale(1.05);
+  /* Slight grow effect */
+}
+
+/* Image right styling */
+.image-right {
+  position: absolute;
+  top: -50px;
+  right: -40px;
+  width: 400px;
+  /* Adjust image size */
+  transform: rotate(-10deg);
+  /* Slight tilt for better alignment */
+  z-index: 0;
+  /* Behind the text content */
+}
+
+/* Image left styling */
+.image-left {
+  position: absolute;
+  top: -60px;
+  left: -70px;
+  width: 400px;
+  /* Consistent image size */
+  transform: rotate(-30deg);
+  /* Tilt for left alignment */
+  z-index: 0;
+  /* Behind the text content */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1100px) {
+  #ready-to-order {
+    align-items: flex-start;
+    /* Aligns items to the left */
+    padding-left: 20px;
+    /* Adds spacing on the left */
+    text-align: left;
+    /* Aligns text content to the left */
+  }
+
+  #ready-to-order h2 {
+    font-size: 1.6rem;
+    /* Adjust font size for better readability */
+    margin-bottom: 15px;
+  }
+
+  .order-button {
+    align-self: flex-start;
+    /* Aligns button to the left */
+    margin-left: 0;
+    /* Removes extra margin on the left */
+  }
+}
+
+@media (max-width:700px) {
+  .image-right {
+    display: none;
+  }
+}

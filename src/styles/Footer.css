@@ -1,0 +1,189 @@
+/* General Footer Styles */
+.footer {
+    background-color: rgba(33,33,33,255); /* Black background */
+    color: #fff; /* White text */
+    padding: 40px 20px;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding in width */
+    position: relative; /* Keeps footer at the bottom if necessary */
+  }
+  
+  /* Top Cities Section */
+  .footer-cities h3 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 0 20px 0;
+  }
+  
+  .cities-row {
+    display: flex;
+    justify-content: space-between; /* Spread columns evenly */
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px; /* Optional: Limit the width of the content */
+    margin: 0 auto; /* Center the content */
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 19px;
+    flex: 1 1 calc(16.66% - 20px); /* Ensures 6 equal columns */
+    min-width: 150px; /* Prevent columns from shrinking too much */
+  }
+  
+  .column p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  
+  /* Horizontal Line */
+  .footer-line {
+    margin: 40px auto;
+    border: 0.5px solid #555; /* Grey color */
+    max-width: 80%; /* Restrict line width */
+  }
+  
+  /* Company Info Section */
+  .footer-info {
+    display: flex;
+    justify-content: space-between; /* Spread sections evenly */
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px; /* Optional: Limit content width */
+    margin: 40px auto;
+  }
+  
+  .info-column {
+    text-align: left;
+    flex: 1 1 calc(33.33% - 20px); /* 3 equal columns */
+    min-width: 200px; /* Prevent shrinking too much */
+  }
+  
+  .info-column h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .info-column p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+  }
+  
+  /* Newsletter Section */
+  .footer-newsletter {
+    margin: 40px auto;
+    text-align: center;
+    max-width: 600px; /* Center and restrict width */
+  }
+  
+  .footer-newsletter h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .newsletter-form input {
+    padding: 10px;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+  }
+  
+  .newsletter-form button {
+    padding: 10px 20px;
+    background-color: #f8c502; /* Yellow button */
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .newsletter-form button:hover {
+    background-color: #e0ae00;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: grey;
+  }
+  
+  /* Responsive Design */
+@media screen and (max-width: 1200px) {
+    .cities-row,
+    .footer-info {
+      flex-wrap: wrap; /* Wrap rows to fit smaller screens */
+      justify-content: center;
+      gap: 20px;
+    }
+  
+    .column {
+      flex: 1 1 calc(33.33% - 10px); /* Adjust columns for medium screens */
+      min-width: 200px;
+    }
+  
+    .info-column {
+      flex: 1 1 calc(33.33% - 10px); /* Adjust sections evenly */
+      text-align: center;
+    }
+    .info-column h4{
+        text-align: left;
+    }
+  }
+  
+
+  
+  @media screen and (max-width: 768px) {
+    .footer-cities h3 {
+      margin-left: 0; /* Center title */
+      text-align: center;
+    }
+  
+    .footer-line {
+      max-width: 90%; /* Adjust horizontal line width */
+    }
+  
+    .newsletter-form input {
+      width: 100%; /* Full width for smaller devices */
+    }
+    .info-column h4{
+        text-align: left;
+    }
+  }
+  
+  @media screen and (min-width: 360px) and (max-width:550px) {
+    /* .footer-cities{
+        display: none;
+    } */
+    .cities-row{
+        justify-self: start!important;
+    }
+    .footer-cities h3{
+        text-align: left;
+    }
+    .info-column h4{
+        text-align: left;
+    }
+    .newsletter-form{
+        flex-direction: column;
+    }
+  }
+  

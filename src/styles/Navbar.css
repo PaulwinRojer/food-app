@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  overflow-x: hidden;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.navbar-logo {
+  width: 100px;
+  height: auto;
+}
+
+/* Address Section */
+.navbar-address {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-address p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+/* Search Section */
+.navbar-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-search input {
+  padding: 8px 12px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  outline: none;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  width: 200px;
+  transition: all 0.3s ease;
+}
+
+.navbar-search input:focus {
+  border-color: rgba(246, 174, 14, 255);
+  box-shadow: 0 0 5px rgba(246, 174, 14, 0.5);
+}
+
+.navbar-search p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Icons */
+.navbar-icon {
+  color: rgba(246, 174, 14, 255);
+  font-size: 18px;
+}
+
+/* Login Button */
+.navbar-login {
+  background-color: rgba(246, 174, 14, 255);
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-login:hover {
+  background-color: #e4940e;
+}
+
+/* RESPONSIVENESS */
+
+/* Tablets and Medium Screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .navbar-search input {
+    width: 100%;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .navbar-logo {
+    width: 80px;
+  }
+
+  .navbar-address {
+    display: none;
+  }
+
+  .navbar-login {
+    display: none;
+  }
+
+  .navbar-search {
+    width: 100%;
+  }
+
+  .navbar-search input {
+    width: 100%;
+  }
+}
+
+.mobile_navabar {
+  display: none; /* Hide mobile navbar by default */
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    display: none; /* Hide desktop navbar on mobile screens */
+  }
+
+  .mobile_navabar {
+    display: block; /* Show mobile navbar on mobile screens */
+  }
+}
+@media (max-width: 480px) {
+
+  .mobile_navabar {
+    padding: 20px;
+  }
+
+  .mobile_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+   
+  .mobile_login_btn {
+    background-color: rgba(246, 174, 14, 255);
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+  }
+  
+  .mobile_login_btn:hover {
+    background-color: #e4940e;
+  }
+}
